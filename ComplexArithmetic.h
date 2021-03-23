@@ -14,6 +14,6 @@ public:
 
     static Complex sh(const Complex &z);
 
-    friend Complex operator "" _i(long double im);
+    friend Complex operator "" i(long double im);
 
 };

@@ -2,13 +2,13 @@
 #include "Complex.h"
 #include <cmath>
 
-Complex operator"" _i(long double im){
+Complex operator"" i(long double im){
     Complex res(0,im);
     return res;
 }
 
 Complex ComplexArithmetic::y(const Complex &z) {
-    const Complex imOne = 1.0_i;
+    const Complex imOne = 1.0i;
     Complex res = z * sh(z + 1) + imOne;
     return res;
 }
