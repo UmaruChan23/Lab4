@@ -1,4 +1,6 @@
 #include <string>
+#ifndef Complex_H
+#define Complex_H
 
 class Complex {
 public:
@@ -12,8 +14,6 @@ public:
     double R() const;
     double Phi() const;
 
-    static Complex y(const Complex &z);
-
     explicit operator double() const;
 
     std::string toString() const;
@@ -21,18 +21,13 @@ public:
     friend std::ostream& operator<< (std::ostream &out, const Complex &z);
     friend std::istream& operator>> (std::istream &in, Complex &z);
 
-private:
-    double re;
-    double im;
-
     Complex operator +(const Complex &z) const;
     Complex operator -(const Complex &z) const;
     Complex operator *(const Complex &z) const;
     Complex operator /(const Complex &z) const;
 
-    static Complex exp(const Complex &z);
-    static Complex sin(const Complex &z);
-    static Complex cos(const Complex &z);
-    static Complex ch(const Complex &z);
-    static Complex sh(const Complex &z);
+private:
+    double re;
+    double im;
 };
+#endif

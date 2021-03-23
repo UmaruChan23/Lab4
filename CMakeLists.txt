@@ -3,4 +3,4 @@ project(Lab4)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Lab4 main.cpp Complex.cpp Complex.h)
+add_executable(Lab4 main.cpp Complex.cpp ComplexArithmetic.cpp Complex.h ComplexArithmetic.h)

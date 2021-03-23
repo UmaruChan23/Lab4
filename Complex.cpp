@@ -44,38 +44,6 @@ double Complex::Phi() const {
     }
 }
 
-Complex Complex::y(const Complex &z) {
-    const Complex imOne(0, 1);
-    Complex res = z * sh(z + 1) + imOne;
-    return res;
-}
-
-Complex Complex::sh(const Complex &z) {
-    Complex res((std::exp(z.Re()) * std::cos(z.Im()) - std::exp(-z.Re()) * std::cos(z.Im())) / 2.,
-                (std::exp(z.Re()) * std::sin(z.Im()) + std::exp(-z.Re()) * std::sin(z.Im())) / 2.);
-    return res;
-}
-
-Complex Complex::ch(const Complex &z) {
-    Complex res(cosh(z.Re()) * std::cos(z.Im()), sinh(z.Re()) * std::sin(z.Im()));
-    return res;
-}
-
-Complex Complex::sin(const Complex &z) {
-    Complex res(std::sin(z.Re()) * cosh(z.Im()), std::cos(z.Re()) * sinh(z.Im()));
-    return res;
-}
-
-Complex Complex::cos(const Complex &z) {
-    Complex res(std::cos(z.Re()) * cosh(z.Im()), -1 * std::sin(z.Re()) * sinh(z.Im()));
-    return res;
-}
-
-Complex Complex::exp(const Complex &z) {
-    Complex res(std::cos(z.Im()) * std::exp(z.Re()), std::sin(z.Im()) * std::exp(z.Re()));
-    return res;
-}
-
 Complex Complex::operator+(const Complex &z) const {
     Complex res(this->re + z.re, this->im + z.im);
     return res;
