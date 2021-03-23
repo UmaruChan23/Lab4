@@ -7,6 +7,9 @@ public:
     Complex();
     Complex(double z);
     Complex(double re, double im);
+
+    Complex(Complex *pComplex);
+
     ~Complex();
 
     double Re() const;
@@ -29,5 +32,6 @@ public:
 private:
     double re;
     double im;
+
 };
 #endif
