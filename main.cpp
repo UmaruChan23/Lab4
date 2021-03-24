@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     Complex num;
     cin >> num;
-    const Complex res = ComplexArithmetic::y(num);
+    const Complex res = y(num);
     cout << res << endl;
     return 0;
 }

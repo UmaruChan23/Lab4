@@ -1,19 +1,15 @@
 #include "Complex.h"
 
-class ComplexArithmetic {
-public:
-    static Complex y(const Complex &z);
+    Complex y(const Complex &z);
 
-    static Complex exp(const Complex &z);
+    Complex exp(const Complex &z);
 
-    static Complex sin(const Complex &z);
+    Complex sin(const Complex &z);
 
-    static Complex cos(const Complex &z);
+    Complex cos(const Complex &z);
 
-    static Complex ch(const Complex &z);
+    Complex ch(const Complex &z);
 
-    static Complex sh(const Complex &z);
+    Complex sh(const Complex &z);
 
-    friend Complex operator "" i(long double im);
-
-};
+    Complex operator "" _i(long double im);
